@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
@@ -25,10 +23,12 @@
         style="@style/tab"
         android:text="Chats" />
 
+
     <TextView
         android:id="@+id/txtStatus"
         style="@style/tab"
         android:text="Status" />
+
 
     <TextView
         android:id="@+id/txtCalls"
@@ -36,5 +36,4 @@
         android:text="Calls" />
 
 </LinearLayout>
-
 

@@ -1,6 +1,7 @@
 package io.androidedu.hoop.ui
 
 import android.os.Bundle
+
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -12,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), TabLayout.BaseOnTabSelectedListener<TabLayout.Tab>, ViewPager.OnPageChangeListener {
 
-
     private val chatsFragment by lazy { ChatsFragment.newInstance() }
     private val statusFragment by lazy { StatusFragment.newInstance() }
     private val cameraFragment by lazy { CameraFragment.newInstance() }
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), TabLayout.BaseOnTabSelectedListener<Ta
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+      
         val fragmentList = ArrayList<Fragment>()
         fragmentList.add(cameraFragment)
         fragmentList.add(chatsFragment)
@@ -71,4 +71,62 @@ class MainActivity : AppCompatActivity(), TabLayout.BaseOnTabSelectedListener<Ta
     }
 
 
+}
+        txtCalls.setOnClickListener(this)
+        txtChats.setOnClickListener(this)
+        txtStatus.setOnClickListener(this)
+        imgbCamera.setOnClickListener(this)
+
+        addFragment(R.id.frmContainer, chatsFragment)
+    }
+
+    override fun onClick(v: View) {
+
+        when (v.id) {
+
+            R.id.txtCalls -> {
+
+                replaceFragment(R.id.frmContainer, callsFragment)
+            }
+
+            R.id.txtChats -> {
+
+                replaceFragment(R.id.frmContainer, chatsFragment)
+            }
+
+            R.id.txtStatus -> {
+
+                replaceFragment(R.id.frmContainer, statusFragment)
+            }
+
+            R.id.imgbCamera -> {
+
+                replaceFragment(R.id.frmContainer, cameraFragment)
+            }
+        }
+    }
+
+
+}
+
+inline fun FragmentManager.inTransaction(function: FragmentTransaction.() -> FragmentTransaction) {
+
+    beginTransaction().function().commit()
+}
+
+fun AppCompatActivity.addFragment(containerId: Int, fragment: Fragment) {
+
+    supportFragmentManager.inTransaction {
+
+        add(containerId, fragment)
+    }
+}
+
+
+fun AppCompatActivity.replaceFragment(containerId: Int, fragment: Fragment) {
+
+    supportFragmentManager.inTransaction {
+
+        replace(containerId, fragment)
+    }
 }

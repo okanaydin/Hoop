@@ -3,7 +3,6 @@ package io.androidedu.hoop.util
 import io.androidedu.hoop.R
 import io.androidedu.hoop.model.ChatModel
 
-
 /**
 ┌─────────────────────────────┐
 │ Created by Okan AYDIN       │
@@ -22,7 +21,6 @@ object GenerateDummyData {
                 "Okan",
                 "Hello World!",
                 "Yesterday")
-
 
         add(chatModel)
         add(chatModel)
@@ -50,4 +48,3 @@ object GenerateDummyData {
 
     }
 }
-
