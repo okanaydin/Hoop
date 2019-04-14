@@ -24,8 +24,9 @@ class ChatsFragment : Fragment() {
 
         with(recylerView_chatList) {
 
-            adapter = ChatListAdapter(GenerateDummyData.getDummyChatList()) {
-                Toast.makeText(activity, "${chatModel.username}", Toast.LENGTH_SHORT).show()
+            adapter = ChatListAdapter(GenerateDummyData.getDummyChatList()) { chatModel ->
+
+                Toast.makeText(activity, "${chatModel.userName}", Toast.LENGTH_SHORT).show()
             }
 
             layoutManager = LinearLayoutManager(activity)

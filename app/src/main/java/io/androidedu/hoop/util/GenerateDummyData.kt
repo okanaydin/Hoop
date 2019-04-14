@@ -15,13 +15,14 @@ import io.androidedu.hoop.model.ChatModel
  */
 object GenerateDummyData {
 
-    fun getDummyChatList(): ArrayList<ChatModel> =
+    fun getDummyChatList(): ArrayList<ChatModel> = ArrayList<ChatModel>().apply {
 
-    val chatModel = ChatModel(
-            R.drawable.ic_camera_black,
-            "Okan",
-            "Hello World",
-            "Yesterday") {
+        val chatModel = ChatModel(
+                R.drawable.ic_camera_black,
+                "Okan",
+                "Hello World!",
+                "Yesterday")
+
 
         add(chatModel)
         add(chatModel)
