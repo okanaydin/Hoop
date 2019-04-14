@@ -1,4 +1,4 @@
-package io.androidedu.hoop.fragments
+package io.androidedu.hoop.ui
 
 
 import android.os.Bundle
@@ -15,5 +15,9 @@ class StatusFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_status, container, false)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = StatusFragment()
+    }
 
 }

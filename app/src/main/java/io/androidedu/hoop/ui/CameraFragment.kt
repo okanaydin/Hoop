@@ -1,4 +1,4 @@
-package io.androidedu.hoop.fragments
+package io.androidedu.hoop.ui
 
 
 import android.os.Bundle
@@ -14,5 +14,9 @@ class CameraFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_camera, container, false)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = CameraFragment()
+    }
 
 }

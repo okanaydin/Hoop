@@ -1,51 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
 
-    <LinearLayout
-            android:id="@+id/linearLayout"
+
+    <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorPrimary"
-            android:orientation="horizontal">
+        android:layout_height="wrap_content" />
 
-        <Button
-                android:id="@+id/frag_camera"
-                android:background="@drawable/icon_camera"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"/>
-        <Button
-                android:id="@+id/frag_chats"
-                android:layout_weight="1"
-                android:text="Chats"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        <Button
-                android:id="@+id/frag_status"
-                android:layout_weight="1"
-                android:text="Status"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        <Button
-                android:id="@+id/frag_calls"
-                android:layout_weight="1"
-                android:text="Calls"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
     <FrameLayout
-            android:id="@+id/frameLayout"
+        android:id="@+id/frameContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/linearLayout">
-    </FrameLayout>
+        android:layout_below="@id/linearLayout" />
+
 
 </RelativeLayout>

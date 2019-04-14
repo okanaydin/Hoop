@@ -1,4 +1,4 @@
-package io.androidedu.hoop.fragments
+package io.androidedu.hoop.ui
 
 
 import android.os.Bundle
@@ -13,6 +13,11 @@ class CallsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_calls, container, false)
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = CallsFragment()
     }
 
 }
