@@ -37,6 +37,6 @@ class CallsFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = CallsFragment()
+        fun newInstance(): CallsFragment = CallsFragment()
     }
 }

@@ -3,7 +3,6 @@ package io.androidedu.hoop.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.model.ChatModel
-
 /**
 ┌─────────────────────────────┐
 │ Created by Okan AYDIN       │
@@ -25,5 +24,7 @@ class ChatListAdapter(val chatList: ArrayList<ChatModel>,
 
         holder.bind(chatList[position], onItemClickListener)
 
+
     }
 }
+

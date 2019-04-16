@@ -1,6 +1,4 @@
 package io.androidedu.hoop.model
-
-
 /**
 ┌─────────────────────────────┐
 │ Created by Okan AYDIN       │

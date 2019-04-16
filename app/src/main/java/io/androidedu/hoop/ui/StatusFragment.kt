@@ -1,6 +1,5 @@
 package io.androidedu.hoop.ui
 
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,10 +12,10 @@ import io.androidedu.hoop.adapter.StatusListAdapter
 import io.androidedu.hoop.util.GenerateDummyData
 import kotlinx.android.synthetic.main.fragment_status.*
 
-
 class StatusFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         return inflater.inflate(R.layout.fragment_status, container, false)
     }
 
@@ -39,5 +38,4 @@ class StatusFragment : Fragment() {
         @JvmStatic
         fun newInstance() = StatusFragment()
     }
-
 }
