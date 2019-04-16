@@ -28,16 +28,10 @@ class ChatListViewHolder(parent: ViewGroup)
 
     init {
 
-
         imgProfile = itemView.findViewById<ImageView>(R.id.imgProfile)
         txtUserName = itemView.findViewById<TextView>(R.id.txtUserName)
         txtUserMessage = itemView.findViewById<TextView>(R.id.txtUserMessage)
         txtDate = itemView.findViewById<TextView>(R.id.txtDate)
-
-        imgProfile = itemView.findViewById(R.id.imgbProfile)
-        txtUserName = itemView.findViewById(R.id.txtUserName)
-        txtUserMessage = itemView.findViewById(R.id.txtUserMessage)
-        txtDate = itemView.findViewById(R.id.txtDate)
 
     }
 

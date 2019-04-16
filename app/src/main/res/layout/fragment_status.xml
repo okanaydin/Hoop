@@ -5,13 +5,10 @@
              android:layout_height="match_parent"
     tools:context=".ui.StatusFragment">
 
-
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerView_statusList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Status Fragment"
-            android:textSize="20sp"
-            android:gravity="center"/>
+            android:layout_height="match_parent"/>
 
 
 </FrameLayout>
